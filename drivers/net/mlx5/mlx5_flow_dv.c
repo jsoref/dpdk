@@ -14538,7 +14538,7 @@ flow_dv_destroy(struct rte_eth_dev *dev, struct rte_flow *flow)
 		else if (dev_handle->split_flow_id &&
 		    !dev_handle->is_meter_flow_id)
 			mlx5_ipool_free(priv->sh->ipool
-					[MLX5_IPOOL_RSS_EXPANTION_FLOW_ID],
+					[MLX5_IPOOL_RSS_EXPANSION_FLOW_ID],
 					dev_handle->split_flow_id);
 		mlx5_ipool_free(priv->sh->ipool[MLX5_IPOOL_MLX5_FLOW],
 			   tmp_idx);

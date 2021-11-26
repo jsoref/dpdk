@@ -5301,7 +5301,7 @@ flow_mreg_split_qrss_prep(struct rte_eth_dev *dev,
 		 * IDs.
 		 */
 		mlx5_ipool_malloc(priv->sh->ipool
-				  [MLX5_IPOOL_RSS_EXPANTION_FLOW_ID], &flow_id);
+				  [MLX5_IPOOL_RSS_EXPANSION_FLOW_ID], &flow_id);
 		if (!flow_id)
 			return rte_flow_error_set(error, ENOMEM,
 						  RTE_FLOW_ERROR_TYPE_ACTION,
@@ -5628,7 +5628,7 @@ flow_sample_split_prep(struct rte_eth_dev *dev,
 		if (ret < 0)
 			return ret;
 		mlx5_ipool_malloc(priv->sh->ipool
-				  [MLX5_IPOOL_RSS_EXPANTION_FLOW_ID], &tag_id);
+				  [MLX5_IPOOL_RSS_EXPANSION_FLOW_ID], &tag_id);
 		*set_tag = (struct mlx5_rte_flow_action_set_tag) {
 			.id = ret,
 			.data = tag_id,
@@ -5899,7 +5899,7 @@ exit:
 	 * These ones are included into parent flow list and will be destroyed
 	 * by flow_drv_destroy.
 	 */
-	mlx5_ipool_free(priv->sh->ipool[MLX5_IPOOL_RSS_EXPANTION_FLOW_ID],
+	mlx5_ipool_free(priv->sh->ipool[MLX5_IPOOL_RSS_EXPANSION_FLOW_ID],
 			qrss_id);
 	mlx5_free(ext_actions);
 	return ret;
