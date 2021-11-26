@@ -309,7 +309,7 @@ eth_ark_dev_init(struct rte_eth_dev *dev)
 		return -1;
 	}
 	if (ark->sysctrl.t32[3] != 0) {
-		if (ark_rqp_lasped(ark->rqpacing)) {
+		if (ark_rqp_lapsed(ark->rqpacing)) {
 			ARK_PMD_LOG(ERR, "Arkville Evaluation System - "
 				    "Timer has Expired\n");
 			return -1;
