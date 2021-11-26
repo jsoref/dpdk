@@ -457,7 +457,7 @@ struct split_type_defs {
 	(MCP_REG_SCRATCH + \
 	 offsetof(struct static_init, sections[SPAD_SECTION_TRACE]))
 
-#define MAX_SW_PLTAFORM_STR_SIZE	64
+#define MAX_SW_PLATFORM_STR_SIZE	64
 
 #define EMPTY_FW_VERSION_STR		"???_???_???_???"
 #define EMPTY_FW_IMAGE_STR		"???????????????"
@@ -1227,13 +1227,13 @@ static u32 qed_dump_common_global_params(struct ecore_hwfn *p_hwfn,
 					 u8 num_specific_global_params)
 {
 	struct dbg_tools_data *dev_data = &p_hwfn->dbg_info;
-	char sw_platform_str[MAX_SW_PLTAFORM_STR_SIZE];
+	char sw_platform_str[MAX_SW_PLATFORM_STR_SIZE];
 	u32 offset = 0;
 	u8 num_params;
 
 	/* Fill platform string */
 	ecore_set_platform_str(p_hwfn, sw_platform_str,
-			       MAX_SW_PLTAFORM_STR_SIZE);
+			       MAX_SW_PLATFORM_STR_SIZE);
 
 	/* Dump global params section header */
 	num_params = NUM_COMMON_GLOBAL_PARAMS + num_specific_global_params +
