@@ -4933,7 +4933,7 @@ get_meter_sub_policy(struct rte_eth_dev *dev,
 			attr->transfer ? MLX5_MTR_DOMAIN_TRANSFER :
 				(attr->egress ? MLX5_MTR_DOMAIN_EGRESS :
 						MLX5_MTR_DOMAIN_INGRESS);
-		sub_policy = policy->sub_policys[mtr_domain][0];
+		sub_policy = policy->sub_policies[mtr_domain][0];
 	}
 	if (!sub_policy)
 		rte_flow_error_set(error, EINVAL,

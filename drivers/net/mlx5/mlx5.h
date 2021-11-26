@@ -751,7 +751,7 @@ struct mlx5_flow_meter_policy {
 	/* drop action for red color. */
 	uint16_t sub_policy_num;
 	/* Count sub policy tables, 3 bits per domain. */
-	struct mlx5_flow_meter_sub_policy **sub_policys[MLX5_MTR_DOMAIN_MAX];
+	struct mlx5_flow_meter_sub_policy **sub_policies[MLX5_MTR_DOMAIN_MAX];
 	/* Sub policy table array must be the end of struct. */
 };
 
