@@ -1328,7 +1328,7 @@ struct cpt_lf_alloc_req_msg {
 	struct mbox_msghdr hdr;
 	uint16_t __io nix_pf_func;
 	uint16_t __io sso_pf_func;
-	uint16_t __io eng_grpmsk;
+	uint16_t __io eng_grpmask;
 	uint8_t __io blkaddr;
 };
 

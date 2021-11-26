@@ -1296,7 +1296,7 @@ struct cpt_lf_alloc_req_msg {
 
 struct cpt_lf_alloc_rsp_msg {
 	struct mbox_msghdr hdr;
-	uint16_t __otx2_io eng_grpmsk;
+	uint16_t __otx2_io eng_grpmask;
 };
 
 #define CPT_INLINE_INBOUND	0
