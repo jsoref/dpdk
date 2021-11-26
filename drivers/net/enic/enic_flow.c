@@ -1319,7 +1319,7 @@ enic_match_action(const struct rte_flow_action *action,
 	return 0;
 }
 
-/** Get the NIC filter capabilties structure */
+/** Get the NIC filter capabilities structure */
 static const struct enic_filter_cap *
 enic_get_filter_cap(struct enic *enic)
 {

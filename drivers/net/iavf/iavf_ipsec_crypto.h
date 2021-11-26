@@ -118,7 +118,7 @@ int iavf_security_init(struct iavf_adapter *adapter);
 /**
  * Set security capabilities
  */
-int iavf_ipsec_crypto_set_security_capabililites(struct iavf_security_ctx
+int iavf_ipsec_crypto_set_security_capabilities(struct iavf_security_ctx
 		*iavf_sctx, struct virtchnl_ipsec_cap *virtchl_capabilities);
 
 
