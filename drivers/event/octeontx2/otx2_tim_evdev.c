@@ -145,7 +145,7 @@ tim_err_desc(int rc)
 {
 	switch (rc) {
 	case TIM_AF_NO_RINGS_LEFT:
-		otx2_err("Unable to allocat new TIM ring.");
+		otx2_err("Unable to allocate new TIM ring.");
 		break;
 	case TIM_AF_INVALID_NPA_PF_FUNC:
 		otx2_err("Invalid NPA pf func.");
