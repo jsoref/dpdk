@@ -1134,7 +1134,7 @@ test_mode4_tx_burst(void)
 
 		if (slave_down_id == slave->port_id) {
 			TEST_ASSERT_EQUAL(normal_cnt + slow_cnt, 0,
-				"slave %u enexpectedly transmitted %u packets",
+				"slave %u unexpectedly transmitted %u packets",
 				normal_cnt + slow_cnt, slave->port_id);
 		} else {
 			TEST_ASSERT_EQUAL(slow_cnt, 0,
