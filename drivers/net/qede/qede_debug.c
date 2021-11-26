@@ -7441,11 +7441,11 @@ qed_print_idle_chk_results_wrapper(struct ecore_hwfn *p_hwfn,
 				   u32 num_dumped_dwords,
 				   char *results_buf)
 {
-	u32 num_errors, num_warnnings;
+	u32 num_errors, num_warnings;
 
 	return qed_print_idle_chk_results(p_hwfn, dump_buf, num_dumped_dwords,
 					  results_buf, &num_errors,
-					  &num_warnnings);
+					  &num_warnings);
 }
 
 /* Feature meta data lookup table */
