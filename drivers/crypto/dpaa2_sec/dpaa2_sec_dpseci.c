@@ -281,7 +281,7 @@ build_proto_fd(dpaa2_sec_session *sess,
 #endif
 
 static inline int
-build_authenc_gcm_sg_fd(dpaa2_sec_session *sess,
+build_authentic_gcm_sg_fd(dpaa2_sec_session *sess,
 		 struct rte_crypto_op *op,
 		 struct qbman_fd *fd, __rte_unused uint16_t bpid)
 {
@@ -426,7 +426,7 @@ build_authenc_gcm_sg_fd(dpaa2_sec_session *sess,
 }
 
 static inline int
-build_authenc_gcm_fd(dpaa2_sec_session *sess,
+build_authentic_gcm_fd(dpaa2_sec_session *sess,
 		     struct rte_crypto_op *op,
 		     struct qbman_fd *fd, uint16_t bpid)
 {
@@ -566,7 +566,7 @@ build_authenc_gcm_fd(dpaa2_sec_session *sess,
 }
 
 static inline int
-build_authenc_sg_fd(dpaa2_sec_session *sess,
+build_authentic_sg_fd(dpaa2_sec_session *sess,
 		 struct rte_crypto_op *op,
 		 struct qbman_fd *fd, __rte_unused uint16_t bpid)
 {
@@ -713,7 +713,7 @@ build_authenc_sg_fd(dpaa2_sec_session *sess,
 }
 
 static inline int
-build_authenc_fd(dpaa2_sec_session *sess,
+build_authentic_fd(dpaa2_sec_session *sess,
 		 struct rte_crypto_op *op,
 		 struct qbman_fd *fd, uint16_t bpid)
 {
@@ -1372,10 +1372,10 @@ build_sec_fd(struct rte_crypto_op *op,
 			ret = build_auth_sg_fd(sess, op, fd, bpid);
 			break;
 		case DPAA2_SEC_AEAD:
-			ret = build_authenc_gcm_sg_fd(sess, op, fd, bpid);
+			ret = build_authentic_gcm_sg_fd(sess, op, fd, bpid);
 			break;
 		case DPAA2_SEC_CIPHER_HASH:
-			ret = build_authenc_sg_fd(sess, op, fd, bpid);
+			ret = build_authentic_sg_fd(sess, op, fd, bpid);
 			break;
 #ifdef RTE_LIB_SECURITY
 		case DPAA2_SEC_IPSEC:
@@ -1396,10 +1396,10 @@ build_sec_fd(struct rte_crypto_op *op,
 			ret = build_auth_fd(sess, op, fd, bpid);
 			break;
 		case DPAA2_SEC_AEAD:
-			ret = build_authenc_gcm_fd(sess, op, fd, bpid);
+			ret = build_authentic_gcm_fd(sess, op, fd, bpid);
 			break;
 		case DPAA2_SEC_CIPHER_HASH:
-			ret = build_authenc_fd(sess, op, fd, bpid);
+			ret = build_authentic_fd(sess, op, fd, bpid);
 			break;
 #ifdef RTE_LIB_SECURITY
 		case DPAA2_SEC_IPSEC:
@@ -2525,7 +2525,7 @@ dpaa2_sec_aead_chain_init(struct rte_cryptodev *dev,
 	priv->flc_desc[0].desc[2] = 0;
 
 	if (session->ctxt_type == DPAA2_SEC_CIPHER_HASH) {
-		bufsize = cnstr_shdsc_authenc(priv->flc_desc[0].desc, 1,
+		bufsize = cnstr_shdsc_authentic(priv->flc_desc[0].desc, 1,
 					      0, SHR_SERIAL,
 					      &cipherdata, &authdata,
 					      session->iv.length,

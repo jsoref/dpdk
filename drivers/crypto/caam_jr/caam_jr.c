@@ -447,7 +447,7 @@ caam_jr_prep_cdb(struct caam_jr_session *ses)
 			}
 		} else {
 			/* Auth_only_len is overwritten in fd for each job */
-			shared_desc_len = cnstr_shdsc_authenc(cdb->sh_desc,
+			shared_desc_len = cnstr_shdsc_authentic(cdb->sh_desc,
 					true, swap, SHR_SERIAL,
 					&alginfo_c, &alginfo_a,
 					ses->iv.length,
