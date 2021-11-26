@@ -2754,8 +2754,8 @@ struct shmem2_region {
 
 	struct eee_remote_vals eee_remote_vals[PORT_MAX];	/* 0x0110 */
 	uint32_t pf_allocation[E2_FUNC_MAX];			/* 0x0120 */
-	#define PF_ALLOACTION_MSIX_VECTORS_MASK    0x000000ff /* real value, as PCI config space can show only maximum of 64 vectors */
-	#define PF_ALLOACTION_MSIX_VECTORS_SHIFT   0
+	#define PF_ALLOCATION_MSIX_VECTORS_MASK    0x000000ff /* real value, as PCI config space can show only maximum of 64 vectors */
+	#define PF_ALLOCATION_MSIX_VECTORS_SHIFT   0
 
 	/* the status of EEE auto-negotiation
 	 * bits 15:0 the configured tx-lpi entry timer value. Depends on bit 31.
