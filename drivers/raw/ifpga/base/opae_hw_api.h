@@ -267,7 +267,7 @@ struct opae_adapter_ops {
 
 TAILQ_HEAD(opae_accelerator_list, opae_accelerator);
 
-#define opae_adapter_for_each_acc(adatper, acc) \
+#define opae_adapter_for_each_acc(adapter, acc) \
 	TAILQ_FOREACH(acc, &adapter->acc_list, node)
 
 #define SHM_PREFIX     "/IFPGA:"
