@@ -386,7 +386,7 @@ hns3_rm_dev_vlan_table(struct hns3_adapter *hns, uint16_t vlan_id)
 
 static void
 hns3_add_dev_vlan_table(struct hns3_adapter *hns, uint16_t vlan_id,
-			bool writen_to_tbl)
+			bool written_to_tbl)
 {
 	struct hns3_user_vlan_table *vlan_entry;
 	struct hns3_hw *hw = &hns->hw;
@@ -403,7 +403,7 @@ hns3_add_dev_vlan_table(struct hns3_adapter *hns, uint16_t vlan_id,
 		return;
 	}
 
-	vlan_entry->hd_tbl_status = writen_to_tbl;
+	vlan_entry->hd_tbl_status = written_to_tbl;
 	vlan_entry->vlan_id = vlan_id;
 
 	LIST_INSERT_HEAD(&pf->vlan_list, vlan_entry, next);
@@ -438,7 +438,7 @@ static int
 hns3_vlan_filter_configure(struct hns3_adapter *hns, uint16_t vlan_id, int on)
 {
 	struct hns3_hw *hw = &hns->hw;
-	bool writen_to_tbl = false;
+	bool written_to_tbl = false;
 	int ret = 0;
 
 	/*
@@ -458,12 +458,12 @@ hns3_vlan_filter_configure(struct hns3_adapter *hns, uint16_t vlan_id, int on)
 	 */
 	if (hw->port_base_vlan_cfg.state == HNS3_PORT_BASE_VLAN_DISABLE) {
 		ret = hns3_set_port_vlan_filter(hns, vlan_id, on);
-		writen_to_tbl = true;
+		written_to_tbl = true;
 	}
 
 	if (ret == 0) {
 		if (on)
-			hns3_add_dev_vlan_table(hns, vlan_id, writen_to_tbl);
+			hns3_add_dev_vlan_table(hns, vlan_id, written_to_tbl);
 		else
 			hns3_rm_dev_vlan_table(hns, vlan_id);
 	}
