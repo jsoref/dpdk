@@ -2177,7 +2177,7 @@ hns3_get_copper_port_speed_capa(uint32_t supported_speed)
 }
 
 static uint32_t
-hns3_get_firber_port_speed_capa(uint32_t supported_speed)
+hns3_get_fiber_port_speed_capa(uint32_t supported_speed)
 {
 	uint32_t speed_capa = 0;
 
@@ -2210,7 +2210,7 @@ hns3_get_speed_capa(struct hns3_hw *hw)
 			hns3_get_copper_port_speed_capa(mac->supported_speed);
 	else
 		speed_capa =
-			hns3_get_firber_port_speed_capa(mac->supported_speed);
+			hns3_get_fiber_port_speed_capa(mac->supported_speed);
 
 	if (mac->support_autoneg == 0)
 		speed_capa |= RTE_ETH_LINK_SPEED_FIXED;
@@ -4524,7 +4524,7 @@ hns3_config_all_msix_error(struct hns3_hw *hw, bool enable)
 }
 
 static uint32_t
-hns3_set_firber_default_support_speed(struct hns3_hw *hw)
+hns3_set_fiber_default_support_speed(struct hns3_hw *hw)
 {
 	struct hns3_mac *mac = &hw->mac;
 
@@ -4582,7 +4582,7 @@ hns3_get_port_supported_speed(struct rte_eth_dev *eth_dev)
 		 */
 		if (mac->supported_speed == 0)
 			mac->supported_speed =
-				hns3_set_firber_default_support_speed(hw);
+				hns3_set_fiber_default_support_speed(hw);
 	}
 
 	return 0;
