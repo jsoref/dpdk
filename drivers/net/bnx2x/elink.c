@@ -746,7 +746,7 @@ typedef elink_status_t (*read_sfp_module_eeprom_func_p)(struct elink_phy *phy,
 /********************************************************/
 #define ELINK_ETH_HLEN			14
 /* L2 header size + 2*VLANs (8 bytes) + LLC SNAP (8 bytes) */
-#define ELINK_ETH_OVREHEAD			(ELINK_ETH_HLEN + 8 + 8)
+#define ELINK_ETH_OVERHEAD			(ELINK_ETH_HLEN + 8 + 8)
 #define ELINK_ETH_MIN_PACKET_SIZE		60
 #define ELINK_ETH_MAX_PACKET_SIZE		1500
 #define ELINK_ETH_MAX_JUMBO_PACKET_SIZE	9600
@@ -2726,7 +2726,7 @@ static elink_status_t elink_emac_enable(struct elink_params *params,
 	/* Enable emac for jumbo packets */
 	elink_cb_reg_write(sc, emac_base + EMAC_REG_EMAC_RX_MTU_SIZE,
 		(EMAC_RX_MTU_SIZE_JUMBO_ENA |
-		 (ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD)));
+		 (ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD)));
 
 	/* Strip CRC */
 	REG_WR(sc, NIG_REG_NIG_INGRESS_EMAC0_NO_CRC + port * 4, 0x1);
@@ -3124,19 +3124,19 @@ static elink_status_t elink_bmac1_enable(struct elink_params *params,
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC_REGISTER_BMAC_CONTROL, wb_data, 2);
 
 	/* Set rx mtu */
-	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD;
+	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD;
 	wb_data[1] = 0;
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC_REGISTER_RX_MAX_SIZE, wb_data, 2);
 
 	elink_update_pfc_bmac1(params, vars);
 
 	/* Set tx mtu */
-	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD;
+	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD;
 	wb_data[1] = 0;
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC_REGISTER_TX_MAX_SIZE, wb_data, 2);
 
 	/* Set cnt max size */
-	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD;
+	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD;
 	wb_data[1] = 0;
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC_REGISTER_CNT_MAX_SIZE, wb_data, 2);
 
@@ -3203,18 +3203,18 @@ static elink_status_t elink_bmac2_enable(struct elink_params *params,
 	DELAY(30);
 
 	/* Set RX MTU */
-	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD;
+	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD;
 	wb_data[1] = 0;
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC2_REGISTER_RX_MAX_SIZE, wb_data, 2);
 	DELAY(30);
 
 	/* Set TX MTU */
-	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD;
+	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD;
 	wb_data[1] = 0;
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC2_REGISTER_TX_MAX_SIZE, wb_data, 2);
 	DELAY(30);
 	/* Set cnt max size */
-	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVREHEAD - 2;
+	wb_data[0] = ELINK_ETH_MAX_JUMBO_PACKET_SIZE + ELINK_ETH_OVERHEAD - 2;
 	wb_data[1] = 0;
 	REG_WR_DMAE(sc, bmac_addr + BIGMAC2_REGISTER_CNT_MAX_SIZE, wb_data, 2);
 	DELAY(30);
@@ -3339,7 +3339,7 @@ static elink_status_t elink_pbf_update(struct elink_params *params,
 
 	} else {
 		uint32_t thresh = (ELINK_ETH_MAX_JUMBO_PACKET_SIZE +
-			      ELINK_ETH_OVREHEAD) / 16;
+			      ELINK_ETH_OVERHEAD) / 16;
 		REG_WR(sc, PBF_REG_P0_PAUSE_ENABLE + port * 4, 0);
 		/* Update threshold */
 		REG_WR(sc, PBF_REG_P0_ARB_THRSH + port * 4, thresh);
