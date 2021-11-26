@@ -961,10 +961,10 @@ struct port_feat_cfg {		    /* port 0: 0x454  port 1: 0x4c8 */
 		#define PORT_FEAT_CFG_DCBX_DISABLED                  0x00000000
 		#define PORT_FEAT_CFG_DCBX_ENABLED                   0x00000100
 
-    #define PORT_FEAT_CFG_AUTOGREEEN_MASK               0x00000200
-	    #define PORT_FEAT_CFG_AUTOGREEEN_SHIFT               9
-	    #define PORT_FEAT_CFG_AUTOGREEEN_DISABLED            0x00000000
-	    #define PORT_FEAT_CFG_AUTOGREEEN_ENABLED             0x00000200
+    #define PORT_FEAT_CFG_AUTOGREEN_MASK               0x00000200
+	    #define PORT_FEAT_CFG_AUTOGREEN_SHIFT               9
+	    #define PORT_FEAT_CFG_AUTOGREEN_DISABLED            0x00000000
+	    #define PORT_FEAT_CFG_AUTOGREEN_ENABLED             0x00000200
 
 	#define PORT_FEAT_CFG_STORAGE_PERSONALITY_MASK                0x00000C00
 	#define PORT_FEAT_CFG_STORAGE_PERSONALITY_SHIFT               10

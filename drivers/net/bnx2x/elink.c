@@ -12102,7 +12102,7 @@ static uint8_t elink_54618se_config_init(struct elink_phy *phy,
 		if (phy->flags & ELINK_FLAGS_EEE) {
 			/* Handle legacy auto-grEEEn */
 			if (params->feature_config_flags &
-			    ELINK_FEATURE_CONFIG_AUTOGREEEN_ENABLED) {
+			    ELINK_FEATURE_CONFIG_AUTOGREEN_ENABLED) {
 				temp = 6;
 				ELINK_DEBUG_P0(sc, "Enabling Auto-GrEEEn");
 			} else {
