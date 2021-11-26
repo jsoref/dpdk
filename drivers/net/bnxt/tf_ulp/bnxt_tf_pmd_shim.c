@@ -102,9 +102,9 @@ int32_t bnxt_rss_config_action_apply(struct bnxt_ulp_mapper_parms *parms)
 
 #define ULP_FILE_PATH_SIZE 256
 
-static int32_t glob_error_fn(const char *epath, int32_t eerrno)
+static int32_t glob_error_fn(const char *epath, int32_t errno)
 {
-	BNXT_TF_DBG(ERR, "path %s error %d\n", epath, eerrno);
+	BNXT_TF_DBG(ERR, "path %s error %d\n", epath, errno);
 	return 0;
 }
 
