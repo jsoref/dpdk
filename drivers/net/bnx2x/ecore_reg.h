@@ -1398,7 +1398,7 @@
  * ~nig_registers_led_control_blink_traffic_p0.led_control_blink_traffic_p0
  */
 #define NIG_REG_LED_CONTROL_OVERRIDE_TRAFFIC_P0			 0x102f8
-/* [RW 1] Port0: If set along with the led_control_override_trafic_p0 bit;
+/* [RW 1] Port0: If set along with the led_control_override_traffic_p0 bit;
  * turns on the Traffic LED. If the led_control_blink_traffic_p0 bit is also
  * set; the LED will blink with blink rate specified in
  * ~nig_registers_led_control_blink_rate_p0.led_control_blink_rate_p0 and
