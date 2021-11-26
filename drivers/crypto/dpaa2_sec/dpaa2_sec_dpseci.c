@@ -1580,7 +1580,7 @@ sec_fd_to_mbuf(const struct qbman_fd *fd)
 	}
 	op = (struct rte_crypto_op *)DPAA2_GET_FLE_ADDR((fle - 1));
 
-	/* Prefeth op */
+	/* Prefetch op */
 	src = op->sym->m_src;
 	rte_prefetch0(src);
 
