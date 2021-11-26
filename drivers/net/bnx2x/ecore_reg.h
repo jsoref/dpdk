@@ -1402,7 +1402,7 @@
  * turns on the Traffic LED. If the led_control_blink_traffic_p0 bit is also
  * set; the LED will blink with blink rate specified in
  * ~nig_registers_led_control_blink_rate_p0.led_control_blink_rate_p0 and
- * ~nig_regsters_led_control_blink_rate_ena_p0.led_control_blink_rate_ena_p0
+ * ~nig_registers_led_control_blink_rate_ena_p0.led_control_blink_rate_ena_p0
  * fields.
  */
 #define NIG_REG_LED_CONTROL_TRAFFIC_P0				 0x10300
