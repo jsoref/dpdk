@@ -4343,7 +4343,7 @@ poweron_cleanup(struct rte_bbdev *bbdev, struct acc100_device *d,
 		for (template_idx = ACC100_SIG_UL_5G;
 				template_idx <= ACC100_SIG_UL_5G_LAST;
 				template_idx++) {
-			address = HWPfQmgrGrpTmplateReg4Indx
+			address = HWPfQmgrGrpTemplateReg4Indx
 					+ ACC100_BYTES_IN_WORD * template_idx;
 			if (template_idx == failed_engine)
 				acc100_reg_write(d, address, value);
@@ -4392,7 +4392,7 @@ poweron_cleanup(struct rte_bbdev *bbdev, struct acc100_device *d,
 		address = HwPfFecUl5gIbDebugReg +
 				ACC100_ENGINE_OFFSET * template_idx;
 		status = (acc100_reg_read(d, address) >> 4) & 0xF;
-		address = HWPfQmgrGrpTmplateReg4Indx
+		address = HWPfQmgrGrpTemplateReg4Indx
 				+ ACC100_BYTES_IN_WORD * template_idx;
 		if (status == 1) {
 			acc100_reg_write(d, address, value);
@@ -4522,19 +4522,19 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 	/* Template Priority in incremental order */
 	for (template_idx = 0; template_idx < ACC100_NUM_TMPL;
 			template_idx++) {
-		address = HWPfQmgrGrpTmplateReg0Indx +
+		address = HWPfQmgrGrpTemplateReg0Indx +
 		ACC100_BYTES_IN_WORD * (template_idx % 8);
 		value = ACC100_TMPL_PRI_0;
 		acc100_reg_write(d, address, value);
-		address = HWPfQmgrGrpTmplateReg1Indx +
+		address = HWPfQmgrGrpTemplateReg1Indx +
 		ACC100_BYTES_IN_WORD * (template_idx % 8);
 		value = ACC100_TMPL_PRI_1;
 		acc100_reg_write(d, address, value);
-		address = HWPfQmgrGrpTmplateReg2indx +
+		address = HWPfQmgrGrpTemplateReg2indx +
 		ACC100_BYTES_IN_WORD * (template_idx % 8);
 		value = ACC100_TMPL_PRI_2;
 		acc100_reg_write(d, address, value);
-		address = HWPfQmgrGrpTmplateReg3Indx +
+		address = HWPfQmgrGrpTemplateReg3Indx +
 		ACC100_BYTES_IN_WORD * (template_idx % 8);
 		value = ACC100_TMPL_PRI_3;
 		acc100_reg_write(d, address, value);
@@ -4548,7 +4548,7 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 	for (template_idx = 0; template_idx < ACC100_NUM_TMPL;
 			template_idx++) {
 		value = 0;
-		address = HWPfQmgrGrpTmplateReg4Indx
+		address = HWPfQmgrGrpTemplateReg4Indx
 				+ ACC100_BYTES_IN_WORD * template_idx;
 		acc100_reg_write(d, address, value);
 	}
@@ -4561,7 +4561,7 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 	for (template_idx = ACC100_SIG_UL_4G;
 			template_idx <= ACC100_SIG_UL_4G_LAST;
 			template_idx++) {
-		address = HWPfQmgrGrpTmplateReg4Indx
+		address = HWPfQmgrGrpTemplateReg4Indx
 				+ ACC100_BYTES_IN_WORD * template_idx;
 		acc100_reg_write(d, address, value);
 	}
@@ -4579,7 +4579,7 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 		address = HwPfFecUl5gIbDebugReg +
 				ACC100_ENGINE_OFFSET * template_idx;
 		status = (acc100_reg_read(d, address) >> 4) & 0xF;
-		address = HWPfQmgrGrpTmplateReg4Indx
+		address = HWPfQmgrGrpTemplateReg4Indx
 				+ ACC100_BYTES_IN_WORD * template_idx;
 		if (status == 1) {
 			acc100_reg_write(d, address, value);
@@ -4600,7 +4600,7 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 	for (template_idx = ACC100_SIG_DL_4G;
 			template_idx <= ACC100_SIG_DL_4G_LAST;
 			template_idx++) {
-		address = HWPfQmgrGrpTmplateReg4Indx
+		address = HWPfQmgrGrpTemplateReg4Indx
 				+ ACC100_BYTES_IN_WORD * template_idx;
 		acc100_reg_write(d, address, value);
 #if RTE_ACC100_SINGLE_FEC == 1
@@ -4616,7 +4616,7 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 	for (template_idx = ACC100_SIG_DL_5G;
 			template_idx <= ACC100_SIG_DL_5G_LAST;
 			template_idx++) {
-		address = HWPfQmgrGrpTmplateReg4Indx
+		address = HWPfQmgrGrpTemplateReg4Indx
 				+ ACC100_BYTES_IN_WORD * template_idx;
 		acc100_reg_write(d, address, value);
 #if RTE_ACC100_SINGLE_FEC == 1
