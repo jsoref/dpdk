@@ -448,7 +448,7 @@ build_authentic_gcm_fd(dpaa2_sec_session *sess,
 
 	/* TODO we are using the first FLE entry to store Mbuf and session ctxt.
 	 * Currently we donot know which FLE has the mbuf stored.
-	 * So while retreiving we can go back 1 FLE from the FD -ADDR
+	 * So while retrieving we can go back 1 FLE from the FD -ADDR
 	 * to get the MBUF Addr from the previous FLE.
 	 * We can have a better approach to use the inline Mbuf
 	 */
@@ -740,7 +740,7 @@ build_authentic_fd(dpaa2_sec_session *sess,
 
 	/* we are using the first FLE entry to store Mbuf.
 	 * Currently we donot know which FLE has the mbuf stored.
-	 * So while retreiving we can go back 1 FLE from the FD -ADDR
+	 * So while retrieving we can go back 1 FLE from the FD -ADDR
 	 * to get the MBUF Addr from the previous FLE.
 	 * We can have a better approach to use the inline Mbuf
 	 */
@@ -1009,7 +1009,7 @@ build_auth_fd(dpaa2_sec_session *sess, struct rte_crypto_op *op,
 	memset(fle, 0, FLE_POOL_BUF_SIZE);
 	/* TODO we are using the first FLE entry to store Mbuf.
 	 * Currently we donot know which FLE has the mbuf stored.
-	 * So while retreiving we can go back 1 FLE from the FD -ADDR
+	 * So while retrieving we can go back 1 FLE from the FD -ADDR
 	 * to get the MBUF Addr from the previous FLE.
 	 * We can have a better approach to use the inline Mbuf
 	 */
@@ -1262,7 +1262,7 @@ build_cipher_fd(dpaa2_sec_session *sess, struct rte_crypto_op *op,
 	memset(fle, 0, FLE_POOL_BUF_SIZE);
 	/* TODO we are using the first FLE entry to store Mbuf.
 	 * Currently we donot know which FLE has the mbuf stored.
-	 * So while retreiving we can go back 1 FLE from the FD -ADDR
+	 * So while retrieving we can go back 1 FLE from the FD -ADDR
 	 * to get the MBUF Addr from the previous FLE.
 	 * We can have a better approach to use the inline Mbuf
 	 */
@@ -1568,7 +1568,7 @@ sec_fd_to_mbuf(const struct qbman_fd *fd)
 
 	/* we are using the first FLE entry to store Mbuf.
 	 * Currently we donot know which FLE has the mbuf stored.
-	 * So while retreiving we can go back 1 FLE from the FD -ADDR
+	 * So while retrieving we can go back 1 FLE from the FD -ADDR
 	 * to get the MBUF Addr from the previous FLE.
 	 * We can have a better approach to use the inline Mbuf
 	 */
