@@ -72,7 +72,7 @@ add_specific(struct rte_ipsec_sad *sad, const void *key,
 	int ret, notexist;
 
 	/* Check if the key is present in the table.
-	 * Need for further accaunting in cnt_arr
+	 * Need for further accounting in cnt_arr
 	 */
 	ret = rte_hash_lookup_with_hash(sad->hash[key_type], key,
 		rte_hash_crc(key, sad->keysize[key_type], sad->init_val));
