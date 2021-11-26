@@ -189,7 +189,7 @@ tim_err_desc(int rc)
 	case TIM_AF_INVALID_ENABLE_DONTFREE:
 		otx2_err("Invalid Don't free value.");
 		break;
-	case TIM_AF_ENA_DONTFRE_NSET_PERIODIC:
+	case TIM_AF_ENA_DONTFREE_NSET_PERIODIC:
 		otx2_err("Don't free bit not set when periodic is enabled.");
 		break;
 	case TIM_AF_RING_ALREADY_DISABLED:
