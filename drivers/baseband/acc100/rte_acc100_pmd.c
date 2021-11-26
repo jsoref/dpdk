@@ -4470,7 +4470,7 @@ rte_acc100_configure(const char *dev_name, struct rte_acc100_conf *conf)
 	acc100_reg_write(d, address, value);
 
 	/* Set default descriptor signature */
-	address = HWPfDmaDescriptorSignatuture;
+	address = HWPfDmaDescriptorSignature;
 	value = 0;
 	acc100_reg_write(d, address, value);
 
