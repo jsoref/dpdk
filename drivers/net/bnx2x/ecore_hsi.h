@@ -2940,7 +2940,7 @@ struct emac_stats {
 	uint32_t     rx_stat_xonpauseframesreceived;
 	uint32_t     rx_stat_xoffpauseframesreceived;
 	uint32_t     rx_stat_maccontrolframesreceived;
-	uint32_t     rx_stat_xoffstateentered;
+	uint32_t     rx_stat_xoffsetateentered;
 	uint32_t     rx_stat_dot3statsframestoolong;
 	uint32_t     rx_stat_etherstatsjabbers;
 	uint32_t     rx_stat_etherstatsundersizepkts;
@@ -3378,8 +3378,8 @@ struct mac_stx {
 	uint32_t     rx_stat_mac_xcf_lo;
 
 	/* xoff_state_entered */
-	uint32_t     rx_stat_xoffstateentered_hi;
-	uint32_t     rx_stat_xoffstateentered_lo;
+	uint32_t     rx_stat_xoffsetateentered_hi;
+	uint32_t     rx_stat_xoffsetateentered_lo;
 	/* pause_xon_frames_received */
 	uint32_t     rx_stat_xonpauseframesreceived_hi;
 	uint32_t     rx_stat_xonpauseframesreceived_lo;
