@@ -58,7 +58,7 @@ struct sec_outring_entry {
 	uint32_t status;	/* Status for completed descriptor */
 } __rte_packed;
 
-/* virtual address conversin when mempool support is available for ctx */
+/* virtual address conversion when mempool support is available for ctx */
 static inline phys_addr_t
 caam_jr_vtop_ctx(struct caam_jr_op_ctx *ctx, void *vaddr)
 {
