@@ -1070,7 +1070,7 @@ struct port_feat_cfg {		    /* port 0: 0x454  port 1: 0x4c8 */
 	#define PORT_FEATURE_MBA_VLAN_TAG_MASK              0x0000FFFF
 	#define PORT_FEATURE_MBA_VLAN_TAG_SHIFT                      0
 	#define PORT_FEATURE_MBA_VLAN_EN                    0x00010000
-	#define PORT_FEATUTE_BOFM_CFGD_EN                   0x00020000
+	#define PORT_FEATURE_BOFM_CFGD_EN                   0x00020000
 	#define PORT_FEATURE_BOFM_CFGD_FTGT                 0x00040000
 	#define PORT_FEATURE_BOFM_CFGD_VEN                  0x00080000
 
