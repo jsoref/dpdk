@@ -18,7 +18,7 @@
 #include <rte_dpaa_logs.h>
 #include <netcfg.h>
 
-/* This data structure contaings all configurations information
+/* This data structure contains all configurations information
  * related to usages of DPA devices.
  */
 static struct netcfg_info *netcfg;
