@@ -2172,7 +2172,7 @@ struct eee_remote_vals {
 	uint32_t         rx_tw;
 };
 
-/**** SUPPORT FOR SHMEM ARRRAYS ***
+/**** SUPPORT FOR SHMEM ARRAYS ***
  * The SHMEM HSI is aligned on 32 bit boundaries which makes it difficult to
  * define arrays with storage types smaller then unsigned dwords.
  * The macros below add generic support for SHMEM arrays with numeric elements
