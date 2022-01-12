@@ -18045,7 +18045,7 @@ flow_dv_validate_mtr_policy_acts(struct rte_eth_dev *dev,
 			domain_color[i] &= hierarchy_domain;
 		/*
 		 * Non-termination actions only support NIC Tx domain.
-		 * The adjustion should be skipped when there is no
+		 * The adjustment should be skipped when there is no
 		 * action or only END is provided. The default domains
 		 * bit-mask is set to find the MIN intersection.
 		 * The action flags checking should also be skipped.
