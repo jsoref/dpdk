@@ -753,7 +753,7 @@ struct feature_fme_ifpmon_ch_ctr {
 	union {
 		u64 csr;
 		struct {
-			/* Cache Counter for even addresse */
+			/* Cache Counter for even addresses */
 			u64 cache_counter:48;
 			u16 rsvd:12;		/* Reserved */
 			/* Cache Event being reported */
