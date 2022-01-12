@@ -507,7 +507,7 @@ static OSAL_INLINE void *ecore_chain_consume(struct ecore_chain *p_chain)
  *
  * Resets the chain to its start state
  *
- * @param p_chain pointer to a previously allocted chain
+ * @param p_chain pointer to a previously allocated chain
  */
 static OSAL_INLINE void ecore_chain_reset(struct ecore_chain *p_chain)
 {
