@@ -129,7 +129,7 @@ opae_bridge_alloc(const char *name, struct opae_bridge_ops *ops, void *data);
 int opae_bridge_reset(struct opae_bridge *br);
 #define opae_bridge_free(br) opae_free(br)
 
-/* OPAE Acceleraotr Data Structure */
+/* OPAE Accelerator Data Structure */
 struct opae_accelerator_ops;
 
 /*
