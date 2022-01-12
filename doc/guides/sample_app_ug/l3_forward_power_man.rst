@@ -32,7 +32,7 @@ In general, the DPDK executes an endless packet processing loop on dedicated IA 
 
 *   Send pending output packets to Tx queue through the PMD
 
-In this way, the PMD achieves better performance than a traditional interrupt-mode driver,
+In this way, the PMD achieves better performance than a tradditional interrupt-mode driver,
 at the cost of keeping cores active and running at the highest frequency,
 hence consuming the maximum power all the time.
 However, during the period of processing light network traffic,

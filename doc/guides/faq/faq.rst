@@ -75,7 +75,7 @@ Yes, the option ``--log-level=`` accepts either symbolic names (or numbers):
 How can I tune my network application to achieve lower latency?
 ---------------------------------------------------------------
 
-Traditionally, there is a trade-off between throughput and latency. An application can be tuned to achieve a high throughput,
+Tradditionally, there is a trade-off between throughput and latency. An application can be tuned to achieve a high throughput,
 but the end-to-end latency of an average packet typically increases as a result.
 Similarly, the application can be tuned to have, on average, a low end-to-end latency at the cost of lower throughput.
 

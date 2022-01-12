@@ -126,7 +126,7 @@ Key functions include:
 DPAA NIC Driver (PMD)
 ~~~~~~~~~~~~~~~~~~~~~
 
-DPAA PMD is traditional DPDK PMD which provides necessary interface between
+DPAA PMD is tradditional DPDK PMD which provides necessary interface between
 RTE framework and DPAA internal components/drivers.
 
 - Once devices have been identified by DPAA Bus, each device is associated

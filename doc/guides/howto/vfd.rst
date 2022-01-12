@@ -39,7 +39,7 @@ application.
 
    VF daemon (VFd) Overview
 
-Compared with the traditional approach the VFd moves the negotiation between
+Compared with the tradditional approach the VFd moves the negotiation between
 VF and PF from the driver level to application level. So the application
 should define how the negotiation between the VF and PF works, or even if the
 control should be limited to the PF.

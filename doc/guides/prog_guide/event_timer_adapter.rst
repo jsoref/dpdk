@@ -6,7 +6,7 @@ Event Timer Adapter Library
 
 The DPDK :doc:`Event Device library <eventdev>`
 introduces an event driven programming model which presents applications with
-an alternative to the polling model traditionally used in DPDK
+an alternative to the polling model tradditionally used in DPDK
 applications. Event devices can be coupled with arbitrary components to provide
 new event sources by using **event adapters**. The Event Timer Adapter is one
 such adapter; it bridges event devices and timer mechanisms.

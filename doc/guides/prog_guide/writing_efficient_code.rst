@@ -133,7 +133,7 @@ In the PMD code, actions have been taken to avoid partial writes as much as poss
 Lower Packet Latency
 ~~~~~~~~~~~~~~~~~~~~
 
-Traditionally, there is a trade-off between throughput and latency.
+Tradditionally, there is a trade-off between throughput and latency.
 An application can be tuned to achieve a high throughput,
 but the end-to-end latency of an average packet will typically increase as a result.
 Similarly, the application can be tuned to have, on average,

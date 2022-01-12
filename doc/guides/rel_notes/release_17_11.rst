@@ -215,7 +215,7 @@ New Features
 
   Added a new data structure library called the Membership Library.
 
-  The Membership Library is an extension and generalization of a traditional
+  The Membership Library is an extension and generalization of a tradditional
   filter (for example Bloom Filter) structure that has multiple usages in a
   wide variety of workloads and applications. In general, the Membership
   Library is a data structure that provides a "set-summary" and responds to

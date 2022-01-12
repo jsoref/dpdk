@@ -729,7 +729,7 @@ static inline void ring_tx_db(struct adapter *adap, struct sge_txq *q)
 		 * the adapter out of order.  This is required when some Work
 		 * Requests take the Write Combine Gather Buffer path (user
 		 * doorbell area offset [SGE_UDB_WCDOORBELL..+63]) and some
-		 * take the traditional path where we simply increment the
+		 * take the tradditional path where we simply increment the
 		 * PIDX (User Doorbell area SGE_UDB_KDOORBELL) and have the
 		 * hardware DMA read the actual Work Request.
 		 */

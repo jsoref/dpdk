@@ -16,7 +16,7 @@ The Flow Bifurcation splits the incoming data traffic to user space
 applications (such as DPDK applications) and/or kernel space programs (such as
 the Linux kernel stack). It can direct some traffic, for example data plane
 traffic, to DPDK, while directing some other traffic, for example control
-plane traffic, to the traditional Linux networking stack.
+plane traffic, to the tradditional Linux networking stack.
 
 There are a number of technical options to achieve this. A typical example is
 to combine the technology of SR-IOV and packet classification filtering.
