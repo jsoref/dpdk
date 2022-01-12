@@ -1251,7 +1251,7 @@ flow_drv_rxq_flags_set(struct rte_eth_dev *dev,
 			continue;
 		/*
 		 * To support metadata register copy on Tx loopback,
-		 * this must be always enabled (metadata may arive
+		 * this must be always enabled (metadata may arrive
 		 * from other port - not from local flows only.
 		 */
 		if (priv->config.dv_flow_en &&
