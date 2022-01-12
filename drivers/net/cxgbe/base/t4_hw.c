@@ -5467,7 +5467,7 @@ int t4_port_init(struct adapter *adap, int mbox, int pf, int vf)
  *
  * Reads/writes an [almost] arbitrary memory region in the firmware: the
  * firmware memory address and host buffer must be aligned on 32-bit
- * boudaries; the length may be arbitrary.
+ * boundaries; the length may be arbitrary.
  *
  * NOTES:
  *  1. The memory is transferred as a raw byte sequence from/to the
