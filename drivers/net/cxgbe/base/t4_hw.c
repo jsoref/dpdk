@@ -3919,7 +3919,7 @@ int t4_alloc_vi_func(struct adapter *adap, unsigned int mbox,
  * @mac: the MAC addresses of the VI
  * @rss_size: size of RSS table slice associated with this VI
  *
- * Backwards compatible and convieniance routine to allocate a Virtual
+ * Backwards compatible and convenience routine to allocate a Virtual
  * Interface with a Ethernet Port Application Function and Intrustion
  * Detection System disabled.
  */
