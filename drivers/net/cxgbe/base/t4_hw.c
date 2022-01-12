@@ -2284,7 +2284,7 @@ int t4_config_rss_range(struct adapter *adapter, int mbox, unsigned int viid,
 			 * Grab up to the next 3 Ingress Queue IDs (wrapping
 			 * around the Ingress Queue ID array if necessary) and
 			 * insert them into the firmware RSS command at the
-			 * current 3-tuple position within the commad.
+			 * current 3-tuple position within the command.
 			 */
 			u16 qbuf[3];
 			u16 *qbp = qbuf;

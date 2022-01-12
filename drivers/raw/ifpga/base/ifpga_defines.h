@@ -1279,7 +1279,7 @@ struct feature_fme_hssi_eth_ctrl {
 			u32 data:32;		/* HSSI data */
 			u16 address:16;		/* HSSI address */
 			/*
-			 * HSSI comamnd
+			 * HSSI command
 			 * 0x0 - No request
 			 * 0x08 - SW register RD request
 			 * 0x10 - SW register WR request
