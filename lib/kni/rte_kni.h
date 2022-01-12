@@ -97,7 +97,7 @@ int rte_kni_init(unsigned int max_kni_ifaces);
 /**
  * Allocate KNI interface according to the port id, mbuf size, mbuf pool,
  * configurations and callbacks for kernel requests.The KNI interface created
- * in the kernel space is the net interface the tradditional Linux application
+ * in the kernel space is the net interface the traditional Linux application
  * talking to.
  *
  * The rte_kni_alloc shall not be called before rte_kni_init() has been

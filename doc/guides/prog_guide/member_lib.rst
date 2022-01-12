@@ -14,7 +14,7 @@ new member, delete an existing member, or query the existence of a member in a
 given set, or a group of sets. For the case of a group of sets, the library
 will return not only whether the element has been inserted before in one of
 the sets but also which set it belongs to.  The Membership Library is an
-extension and generalization of a tradditional filter structure (for example
+extension and generalization of a traditional filter structure (for example
 Bloom Filter [Member-bloom]) that has multiple usages in a wide variety of
 workloads and applications. In general, the Membership Library is a data
 structure that provides a "set-summary" on whether a member belongs to a set,
@@ -200,7 +200,7 @@ inspection application benefits from knowing right away that the current payload
 does not match any attack signatures in the database to establish its
 legitimacy, otherwise a deep inspection of the packet is needed.
 
-HTSS employs a similar but simpler data structure to a tradditional hash table,
+HTSS employs a similar but simpler data structure to a traditional hash table,
 and the major difference is that HTSS stores only the signatures but not the
 full keys/elements which can significantly reduce the footprint of the table.
 Along with the signature, HTSS also stores a value to indicate the target set.
@@ -215,7 +215,7 @@ false negative probability. We discuss this case in the next section.
 Set-Summaries with False Negative Probability
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-As previously mentioned, tradditional set-summaries (e.g. Bloom Filters) do not
+As previously mentioned, traditional set-summaries (e.g. Bloom Filters) do not
 have a false negative probability, i.e., it is 100% certain when an element
 returns "not to be present" for a given set. However, the Membership Library
 also supports a set-summary probabilistic data structure based on HTSS which
@@ -378,7 +378,7 @@ element/key that needs to be deleted from the set-summary, and ``set_id``
 which is the set id associated with the key to delete. It is worth noting that current
 implementation of vBF does not support deletion [1]_. An error code ``-EINVAL`` will be returned.
 
-.. [1] Tradditional bloom filter does not support proactive deletion. Supporting proactive deletion require additional implementation and performance overhead.
+.. [1] Traditional bloom filter does not support proactive deletion. Supporting proactive deletion require additional implementation and performance overhead.
 
 References
 -----------

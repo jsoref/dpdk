@@ -68,7 +68,7 @@ Target destinations (shown in red) are hashed into the same space as the flow
 keys (shown in blue), and keys are mapped to the nearest target in a clockwise
 fashion. Dynamically adding and removing targets with consistent hashing
 requires only K/n keys to be remapped on average, where K is the number of
-keys, and n is the number of targets. In contrast, in a tradditional hash-based
+keys, and n is the number of targets. In contrast, in a traditional hash-based
 scheme, a change in the number of targets causes nearly all keys to be
 remapped.
 

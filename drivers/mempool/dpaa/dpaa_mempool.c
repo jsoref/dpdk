@@ -330,7 +330,7 @@ dpaa_populate(struct rte_mempool *mp, unsigned int max_objs,
 		DPAA_MEMPOOL_WARN("Fast Physical to Virtual Addr translation would not be available.");
 		/* If the element is not added, it would only lead to failure
 		 * in searching for the element and the logic would Fallback
-		 * to tradditional DPDK memseg traversal code. So, this is not
+		 * to traditional DPDK memseg traversal code. So, this is not
 		 * a blocking error - but, error would be printed on screen.
 		 */
 		return 0;

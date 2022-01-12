@@ -444,7 +444,7 @@ The setup procedure is as follows:
         lrwxrwxrwx. 1 root root 0 Apr 13 05:51 /sys/bus/pci/devices/0000:02:00.1/virtfn1 -> ../0000:02:10.3
         lrwxrwxrwx. 1 root root 0 Apr 13 05:51 /sys/bus/pci/devices/0000:02:00.1/virtfn0 -> ../0000:02:10.1
 
-#.  List the PCI devices connected and notice that the Host OS shows two Physical Functions (tradditional ports)
+#.  List the PCI devices connected and notice that the Host OS shows two Physical Functions (traditional ports)
     and four Virtual Functions (two for each port).
     This is the result of the previous step.
 

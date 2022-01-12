@@ -7,7 +7,7 @@
  *
  * RTE Membership Library
  *
- * The Membership Library is an extension and generalization of a tradditional
+ * The Membership Library is an extension and generalization of a traditional
  * filter (for example Bloom Filter and cuckoo filter) structure that has
  * multiple usages in a variety of workloads and applications. The library is
  * used to test if a key belongs to certain sets. Two types of such

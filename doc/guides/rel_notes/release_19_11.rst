@@ -271,7 +271,7 @@ New Features
 * **Added new l2fwd-event sample application.**
 
   Added an example application ``l2fwd-event`` that adds event device support to
-  the tradditional l2fwd example. It demonstrates usage of poll and event mode IO
+  the traditional l2fwd example. It demonstrates usage of poll and event mode IO
   mechanism under a single application.
 
 * **Added build support for Link Time Optimization.**

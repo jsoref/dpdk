@@ -514,7 +514,7 @@ To create a mempool for storing session private data, the application has two
 options. The first is to create another mempool with elt size equal to or
 bigger than the maximum session private data size of all crypto devices that
 will share the same session header. The creation of the mempool shall use the
-tradditional ``rte_mempool_create()`` with the correct ``elt_size``. The other
+traditional ``rte_mempool_create()`` with the correct ``elt_size``. The other
 option is to change the ``elt_size`` parameter in
 ``rte_cryptodev_sym_session_pool_create()`` to the correct value. The first
 option is more complex to implement but may result in better memory usage as
