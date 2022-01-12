@@ -1968,7 +1968,7 @@ enum MFW_DRV_MSG_TYPE {
 ((u8)((u8 *)(MFW_MB_P(shmem_func)->msg))[msg_id]++;)
 
 struct public_mfw_mb {
-	u32 sup_msgs;       /* Assigend with MFW_DRV_MSG_MAX */
+	u32 sup_msgs;       /* Assigned with MFW_DRV_MSG_MAX */
 /* Incremented by the MFW */
 	u32 msg[MFW_DRV_MSG_MAX_DWORDS(MFW_DRV_MSG_MAX)];
 /* Incremented by the driver */
