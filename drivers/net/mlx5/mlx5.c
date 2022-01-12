@@ -96,7 +96,7 @@
 
 /*
  * Device parameter to force doorbell register mapping
- * to non-cahed region eliminating the extra write memory barrier.
+ * to non-cached region eliminating the extra write memory barrier.
  */
 #define MLX5_TX_DB_NC "tx_db_nc"
 
