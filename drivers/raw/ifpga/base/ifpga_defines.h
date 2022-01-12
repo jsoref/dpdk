@@ -1595,7 +1595,7 @@ struct feature_port_stp {
  * @FPGA_PR_STATE_OPERATING: FPGA PR done
  */
 enum fpga_pr_states {
-	/* canot determine state states */
+	/* cannot determine state states */
 	FPGA_PR_STATE_UNKNOWN,
 
 	/* write sequence: init, write, complete */
