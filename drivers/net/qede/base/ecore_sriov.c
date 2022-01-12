@@ -3564,7 +3564,7 @@ static void ecore_iov_vf_mbx_ucast_filter(struct ecore_hwfn *p_hwfn,
 	    ECORE_SUCCESS)
 		goto out;
 
-	/* Determine if the unicast filtering is acceptible by PF */
+	/* Determine if the unicast filtering is acceptable by PF */
 	if ((p_bulletin->valid_bitmap & (1 << VLAN_ADDR_FORCED)) &&
 	    (params.type == ECORE_FILTER_VLAN ||
 	     params.type == ECORE_FILTER_MAC_VLAN)) {
