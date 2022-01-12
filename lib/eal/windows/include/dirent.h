@@ -462,7 +462,7 @@ readdir(DIR *dirp)
 		/*
 		 * If the file name cannot be represented by a multi-byte
 		 * string, then attempt to use old 8+3 file name.
-		 * This allows tradditional Unix-code to access some file
+		 * This allows traditional Unix-code to access some file
 		 * names despite of unicode characters, although file names
 		 * may seem unfamiliar to the user.
 		 *

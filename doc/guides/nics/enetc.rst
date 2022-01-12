@@ -57,7 +57,7 @@ ENETC Features
 NIC Driver (PMD)
 ~~~~~~~~~~~~~~~~
 
-ENETC PMD is tradditional DPDK PMD which provides necessary interface between
+ENETC PMD is traditional DPDK PMD which provides necessary interface between
 RTE framework and ENETC internal drivers.
 
 - Driver registers the device vendor table in PCI subsystem.
