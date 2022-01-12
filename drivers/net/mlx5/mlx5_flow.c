@@ -8594,7 +8594,7 @@ mlx5_flow_dev_dump(struct rte_eth_dev *dev, struct rte_flow *flow_idx,
  *   Pointer to the Ethernet device structure.
  * @param[in] context
  *   The address of an array of pointers to the aged-out flows contexts.
- * @param[in] nb_countexts
+ * @param[in] nb_contexts
  *   The length of context array pointers.
  * @param[out] error
  *   Perform verbose error reporting if not NULL. Initialized in case of
