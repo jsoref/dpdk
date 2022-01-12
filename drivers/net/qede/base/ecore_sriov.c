@@ -1034,7 +1034,7 @@ static u8 ecore_iov_alloc_vf_igu_sbs(struct ecore_hwfn *p_hwfn,
  *
  * @brief The function invalidates all the VF entries,
  *        technically this isn't required, but added for
- *        cleaness and ease of debugging incase a VF attempts to
+ *        cleanness and ease of debugging incase a VF attempts to
  *        produce an interrupt after it has been taken down.
  *
  * @param p_hwfn
