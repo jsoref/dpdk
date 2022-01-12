@@ -5963,7 +5963,7 @@ flow_meter_create_drop_flow_with_org_pattern(struct rte_eth_dev *dev,
  *   suffix flow. The packets make sense only it pass the prefix
  *   meter action.
  *
- * - Reg_C_5 is used for the packet to match betweend prefix and
+ * - Reg_C_5 is used for the packet to match between prefix and
  *   suffix flow.
  *
  * @param dev
