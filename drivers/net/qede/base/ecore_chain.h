@@ -283,7 +283,7 @@ dma_addr_t ecore_chain_get_pbl_phys(struct ecore_chain *p_chain)
 /**
  * @brief ecore_chain_advance_page -
  *
- * Advance the next element accros pages for a linked chain
+ * Advance the next element across pages for a linked chain
  *
  * @param p_chain
  * @param p_next_elem
