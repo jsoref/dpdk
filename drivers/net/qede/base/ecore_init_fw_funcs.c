@@ -348,7 +348,7 @@ static void ecore_btb_blocks_rt_init(struct ecore_hwfn *p_hwfn,
 				BTB_HEADROOM_BLOCKS;
 
 		/* Find blocks per physical TC. use factor to avoid floating
-		 * arithmethic.
+		 * arithmetic.
 		 */
 		num_tcs_in_port = 0;
 		for (tc = 0; tc < NUM_OF_PHYS_TCS; tc++)
